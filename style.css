@@ -1,0 +1,474 @@
+/*GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+
+
+/* ============================== ============================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #222222;
+}
+h1,h2,h3,h4,h5,h6{
+  color: #222222;
+}
+h1{
+  font-family: 'Poppins',sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+}
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  transition: .2s;
+}
+a:hover{
+  text-decoration: none;
+  color: #888888 !important;
+}
+img{
+  transition: .2s;
+}
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*REUSEABLE COMPONENTS*/
+.para_text{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #888888;
+}
+.btn-default{
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #222222;
+  text-transform: uppercase;
+  color: #222222;
+  transition: .3s;
+}
+.btn-default:hover{
+  color: #888;
+  border-color: #888;
+}
+/*REUSEABLE COMPONENTS END*/
+
+
+/* ==========================================================================
+   CUSTOME CSS HERE
+   ========================================================================== */
+
+
+/*HEADER PART START*/
+header {}
+header .main-nav{
+  margin: 40px 0;
+}
+header .menu-part-1{}
+header .menu-part-1 ul.nav-menu-1{
+  
+}
+header .menu-part-1 ul.nav-menu-1 li{
+    position: relative;
+}
+header .menu-part-1 > ul.nav-menu-1 > li > a, header .menu-part-3 > .nav-menu-2 > li > a{
+  display: inline-block;
+  padding: 40px 0;
+  padding-right: 50px;
+  text-transform: uppercase;
+  color: #222222;
+  font-size: 14px;
+}
+header .menu-part-1 ul.nav-menu-1 li:last-child a, header .menu-part-3 .nav-menu-2 li:last-child a{
+  padding-right: 0;
+}
+header .menu-part-1 ul.nav-menu-1 .hover-menu{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 250px;
+  background: #222;
+  padding: 30px 0 30px 20px;
+  transition: .5s;
+  z-index: 100;
+}
+header .menu-part-1 ul.nav-menu-1 li:hover .hover-menu{
+  left: 0;
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+header .menu-part-1 ul.nav-menu-1 li .hover-menu li a:hover{
+  padding-left: 5px;
+}
+header .menu-part-1 ul.nav-menu-1 .hover-menu li a{
+  display: inline-block;
+  transition: .3s;
+  color: #888;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+header .menu-part-1 ul.nav-menu-1 .hover-menu li:hover > a{
+  color: #fff !important;
+}
+header .menu-part-1 ul.nav-menu-1 .hover-menu li{
+  position: relative;
+}
+header .menu-part-1 ul.nav-menu-1 .hover-menu .hover-menu-2nd{
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  width: 250px;
+  background: #222;
+  padding: 30px 0 30px 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  box-shadow: 1px 1px 5px 0px #868686;
+  z-index: 100;
+}
+header .menu-part-1 ul.nav-menu-1 .hover-menu li:hover .hover-menu-2nd{
+  visibility: visible;
+  opacity: 1;
+}
+header .menu-part-1 ul.nav-menu-1 .hover-menu li a i{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .menu-part-2{}
+header .menu-part-2 a{}
+header .menu-part-2 a img{}
+header .menu-part-3{}
+header .menu-part-3 .nav-menu-2{
+  position: relative;
+}
+header .menu-part-3 .nav-menu-2 li{}
+header .menu-part-3 .nav-menu-2 li a{
+/*  color: #888;
+  align-self: flex-end;
+  font-size: 12px;
+  text-transform: uppercase;*/
+}
+/*CART PART START*/
+
+header .menu-part-3 .nav-menu-2 li:hover .cart{
+  visibility: visible;
+  opacity: 1;
+}
+.cart{
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+  background: #222222;
+  width: 380px;
+  padding: 50px 50px 50px 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+}
+.cart .cart-menu{
+   border-bottom: 1px solid #333333;
+}
+.cart .cart-menu li{
+  margin-bottom: 30px;
+}
+.cart .cart-menu li img{
+  widows: 85px;
+  height: 105px;
+}
+.cart .cart-menu li .cart-body{
+  padding-left: 30px;
+}
+.cart-body a {
+    color: #888;
+}
+.cart .cart-menu li .cart-body p{
+  color: #eee;
+  font-family: 'Oswald',sans-serif;
+  font-size: 18px;
+}
+.cart .cart-menu li .cart-body p span{
+  color: #888 ;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: 300 !important;
+  font-size: 14px;
+}
+.checkout-part{
+  padding-top: 30px;
+}
+.checkout-part p{
+  color: #fff;
+}
+.checkout-part p:nth-child(2){
+  font-family: "Oswald",sans-serif;
+  font-weight: 500;
+}
+.checkout-part a.checkout-btn{
+    margin-top: 30px;
+    background: #111111;
+    padding: 20px 0;
+    color: #fff !important;
+}
+.cart-body a {
+    color: #888;
+    
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.cart-menu li a{
+  color: #888;
+  align-self: flex-end;
+}
+/*SEARCH BUTTON*/
+.search-part{
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 100;
+  transition: .4s;
+  display: none;
+}
+.search-box{
+  position: relative;
+}
+.search-input{
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background: #222222;
+  padding-left: 30px;
+  color: #888;
+}
+.search-button{
+  position: absolute;
+  right: 0;
+  background: transparent;
+  top: 0;
+  border: 0;
+  color: #888;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*MEGA MENU PART START*/
+.main-nav{
+  position: relative;
+}
+.mega-menu-up-li{
+  position: static !important;
+}
+.mega-menu-up-link{}
+.mega-menu{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 1320px;
+  z-index: 100;
+  background: #222222;
+  padding: 50px 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease;
+
+}
+.mega-menu-up-li:hover .mega-menu{
+  visibility: visible;
+  opacity: 1;
+}
+.mega-menu > li{
+  flex-basis: 25%;
+  width: 25%;
+  padding-right: 50px;
+}
+.mega-menu > li:last-child{
+  padding-right: 0;
+}
+.mega-menu > li > a{
+  color: #fff;
+  display: block;
+  border-bottom: 1px solid #444444;
+  padding-bottom: 15px;
+}
+.mega-menu-item{
+  margin-top: 25px;
+}
+.mega-menu-item li{
+}
+.mega-menu-item li a{
+  color: #888;
+  transition: .3s;
+    display: block;
+    padding: 7px 0;
+}
+.mega-menu-item li:hover a{
+  color: #fff !important;
+  display: block;
+  padding-left: 10px;
+}
+header .main-slide{}
+header .main-slide .item{position: relative;}
+header .main-slide .item .slide-img{
+}
+header .main-slide .item .hero-text{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+header .main-slide .item .hero-text h1{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+header .main-slide .item .hero-text h1 span{
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+header .main-slide .item .hero-text p{
+  margin-bottom: 60px;
+}
+header .main-slide .item .hero-text a{}
+
+header .owl-dots{
+  display: none;
+}
+header .owl-theme .owl-nav{
+  margin: 0;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+header button.owl-next:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background: #222;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+header .owl-theme .owl-nav [class*=owl-]:hover {
+  background: transparent;
+  color: #888;
+}
+header button.owl-next{
+  color: #888 !important;
+}
+/*HEADER PART FINISH*/
+
+/* fonts
+
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+*/
+
